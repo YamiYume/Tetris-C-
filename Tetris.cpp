@@ -22,7 +22,7 @@ int XM=WidthF/2;
 int YM=0;
 int Speed=20;
 int Times=0;
-int Given;
+int Given=0;
 vector<int> Deline;
 
 int Rotation(int X, int Y, int G){
