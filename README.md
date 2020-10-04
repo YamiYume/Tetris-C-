@@ -55,4 +55,4 @@ if (!Deline.empty()){
             Deline.clear();    
         }     
 ```
-#Aunque hay otros por menores acerca del juego estos son aquellos que fundamentan su funcionamiento y con ellos es mas que suficiente para entender su implementación
+# Aunque hay otros por menores acerca del juego estos son aquellos que fundamentan su funcionamiento y con ellos es mas que suficiente para entender su implementación
