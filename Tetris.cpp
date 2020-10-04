@@ -21,6 +21,7 @@ int YM=0;
 int Speed=15;
 int Times=0;
 int Given=0;
+int Score=0;
 vector<int> Deline;
 int Rotation(int X, int Y, int G){
     switch(G % 4)
@@ -111,7 +112,10 @@ int main(){
             if(Valid(Piece,Giro,XM+1,YM))XM=XM+1;
         }
         if(BKey[2]){
-            if(Valid(Piece,Giro,XM,YM+1))YM=YM+1;
+            if(Valid(Piece,Giro,XM,YM+1)){
+                YM=YM+1;
+                Score+=10;
+            }
         }
         if(BKey[3]){
             if(Valid(Piece,Giro+1,XM,YM) && !HoldG){
@@ -130,6 +134,17 @@ int main(){
                 if((tetromino[Piece][Rotation(PX,PY,Giro)])==L'X')
                     Screen[(YM+PY+5)*WidthS+(XM+PX+34)]=Piece+65;
         if (!Deline.empty()){
+            switch(Deline.size())
+            {
+                case 1: Score+=100;
+                break;
+                case 2: Score+=250;
+                break;
+                case 3: Score+=550;
+                break;
+                case 4: Score+=800;
+                break;
+            }
             WriteConsoleOutputCharacter(hConsole,Screen,HeigthS*WidthS,{0,0},&dwBytesWritten);
             Sleep(300);
             for(auto &V : Deline)
@@ -142,5 +157,8 @@ int main(){
         }      
         WriteConsoleOutputCharacter(hConsole,Screen,HeigthS*WidthS,{0,0},&dwBytesWritten);
      }
+     CloseHandle(hConsole);
+     cout<<"Score:"<<Score;
+     Sleep(1000);
     return 0;
 }
