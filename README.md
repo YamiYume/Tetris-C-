@@ -56,3 +56,4 @@ if (!Deline.empty()){
         }     
 ```
 # Aunque hay otros por menores acerca del juego estos son aquellos que fundamentan su funcionamiento y con ellos es mas que suficiente para entender su implementación
+# El programa ***NO*** Corre en linux, pues depende de archivos del sistema de windows para correr sus graficos y no se encontro forma de hacer esto funcionar en linux.
