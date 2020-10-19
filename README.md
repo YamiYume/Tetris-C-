@@ -1,5 +1,6 @@
 # Tetris-CPP
 A version of tetris in c++
+## Basado en El video Code-It-Yourself! Tetris - Programming from Scratch `https://www.youtube.com/watch?v=8OK8_tHeCIA&ab_channel=javidx9`
 ## Funcionamiento
 ### Empecemos por la representacion.
 - Si bien los tableros son una matriz de información, en aras de la ligereza y la sofisticación podemos representar cada uno de los datos necesarios en este caso como un string
